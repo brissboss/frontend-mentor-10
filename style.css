@@ -32,9 +32,8 @@ body {
     justify-content: center;
 
     height: min(100dvh, 40rem);
-    width: min(100dvw, 22rem);
-
-    /* border: 2px solid red; */
+    width: min(100dvw, 35rem);
+    padding: 0 20px;
 }
 
 .card-balance {
@@ -93,27 +92,48 @@ body {
 }
 
 .column {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    cursor: pointer;
 
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 5vh;
     height: 100%;
 
     font-size: 15px;
     color: hsl(0, 7%, 58%);
 }
 
-.column-unique {
-    position: absolute;
-    width: 85%;
-    /* height: 85%; max 85% */
-    bottom: 25px;
+.column:nth-child(n + 2) {
+    margin-left: 1vh;
+}
 
-    border-radius: 5px;
+.column-unique-amount {
+    display: none;
+
+    text-align: center;
+    padding: 2px 0;
+    border-radius: 3px;
+    width: 100%;
+
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    color: hsl(33, 100%, 98%);
+    background-color: hsl(25, 47%, 15%);
+}
+
+.column-unique {
+    width: 100%;
+
+    border-radius: 3px;
     
     color: transparent;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
 }
 
 .red:is(.column-unique) {
@@ -123,6 +143,19 @@ body {
 .blue:is(.column-unique) {
     background-color: hsl(186, 34%, 60%);
 }
+
+.column:hover .red:is(.column-unique) {
+    background-color: hsl(10, 79%, 85%);
+}
+
+.column:hover .column-unique-amount {
+    display: block;
+}
+
+.column:hover .blue:is(.column-unique) {
+    background-color: hsl(186, 34%, 80%);
+}
+
 
 .result {
     display: flex;
