@@ -1,43 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap">
+	<script src="/script.js" async></script>
+	<title>Frontend Mentor | Expenses chart component</title>
 </head>
+
 <body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+	<div class="card">
+		<div class="card-balance">
+			<div class="content-balance">
+				<h1>My balance</h1>
+				<p id="amout-balance">$921.48</p>
+			</div>
+			<div class="logo">
+				<img src="/images/logo.svg" alt="">
+			</div>
+		</div>
+		<div class="card-resume">
+			<div class="title">
+				<h1>Spending - Last 7 days</h1>
+			</div>
+			<div class="graph">
+				<div class="column" id="mon">
+					<p>mon</p>
+					<span 
+						class="column-unique red" 
+						id="column-mon"
+						style="height: 20%;"
+					>x</span>
+				</div>
+				<div class="column" id="tue">
+					<p>tue</p>
+					<span 
+						class="column-unique red" 
+						id="column-tue"
+						style="height: 30%;"
+					>x</span>
+				</div>
+				<div class="column" id="wed">
+					<p>wed</p>
+					<span 
+						class="column-unique red" 
+						id="column-wed"
+						style="height: 10%;"
+					>x</span>
+				</div>
+				<div class="column" id="thu">
+					<p>thu</p>
+					<span
+						class="column-unique blue" 
+						id="column-thu"
+						style="height: 70%;"
+					>x</span>
+				</div>
+				<div class="column" id="fri">
+					<p>fri</p>
+					<span 
+						class="column-unique red" 
+						id="column-fri"
+						style="height: 5%;"
+					>x</span>
+				</div>
+				<div class="column" id="sat">
+					<p>sat</p>
+					<span 
+						class="column-unique red" 
+						id="column-sat"
+						style="height: 55%;"
+					>x</span>
+				</div>
+				<div class="column" id="sun">
+					<p>sun</p>
+					<span 
+						class="column-unique red" 
+						id="column-sun"
+						style="height: 32%;"
+					>x</span>
+				</div>
+			</div>
+			<div class="result">
+				<div class="total">
+					<h1>Total this month</h1>
+					<p id="amout-total">$478.33</p>
+				</div>
+				<div class="increase">
+					<p>+2.4%</p>
+					<h1>from last month</h1>
+				</div>		
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
