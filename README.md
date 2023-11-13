@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/expenses-chart-mobile-first-js-0mD-GyE4qe)
 - Live Site URL: [My solution](https://frontend-mentor-10-ecru.vercel.app/)
 
 ## My process
